@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from "./screens/SplashScreen";
 import HomeScreen from "./screens/HomeScreen";
+import AlbumDetailScreen from "./screens/AlbumDetailScreen";
+import PlayerScreen from "./screens/PlayerScreen"; 
 import { StatusBar } from "react-native";
 
 
@@ -23,6 +25,16 @@ const App = () => {
           <Stack.Screen
             name="HomeScreen"
             component={HomeScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="AlbumScreen"
+            component={AlbumDetailScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="PlayerScreen"
+            component={PlayerScreen}
             options={{ headerShown: false }}
           />
 
