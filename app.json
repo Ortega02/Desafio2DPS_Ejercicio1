@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "UdbMusic",
+    "slug": "UdbMusic",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "UdbMusic"
+}
