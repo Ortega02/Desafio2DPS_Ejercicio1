@@ -15,7 +15,7 @@ const AlbumDetailScreen = ({ route }) => {
       artistName: autor,
       coverImage: album.cover,
     });
-  };
+  };  
   
 
   const deleteAlbum = () => {

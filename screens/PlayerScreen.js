@@ -1,52 +1,102 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
-import Sound from 'react-native-sound';
+import React, { useEffect } from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  Dimensions,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
+import TrackPlayer from 'react-native-track-player';
+import Slider from '@react-native-community/slider';
+const { width, height } = Dimensions.get('window');
 
 const PlayerScreen = ({ route }) => {
-  const { albumTitle, songTitle, artistName, coverImage } = route.params;
-  
-  const [sound, setSound] = useState(null);
+  const { songTitle, artistName, coverImage } = route.params;
 
   useEffect(() => {
-    // Configurar el objeto Sound para la canción seleccionada
-    const soundFile = new Sound(songTitle, Sound.MAIN_BUNDLE, (error) => {
-      if (error) {
-        console.error('No se pudo cargar el archivo de audio', error);
-        return;
-      }
-      setSound(soundFile);
-    });
-
-    return () => {
-      // Detener y liberar el recurso de audio cuando el componente se desmonte
-      if (sound) {
-        sound.stop();
-        sound.release();
+    const setupAndPlaySong = async () => {
+      try {
+        await TrackPlayer.setupPlayer();
+        await TrackPlayer.add({
+          id: 'mySong', // Unique ID for the song
+          url: `../src/audio/${songTitle}.mp3`, // Path to the song file
+          title: songTitle,
+          artist: artistName,
+          artwork: coverImage,
+        });
+        await TrackPlayer.play();
+      } catch (error) {
+        console.error('Error playing the song:', error);
       }
     };
-  }, [songTitle]);
 
-  const playSong = () => {
-    if (sound) {
-      sound.play();
-    }
-  };
+    setupAndPlaySong();
 
-  // Resto de tu código
+    return () => {
+      TrackPlayer.destroy();
+    };
+  }, [songTitle, artistName, coverImage]);
 
   return (
-    <View style={styles.container}>
-      <Image source={coverImage} style={styles.albumCover} />
-      <Text style={styles.songTitle}>{songTitle}</Text>
-      <Text style={styles.artistName}>{artistName}</Text>
-      <TouchableOpacity onPress={playSong} style={styles.playButton}>
-        <Text style={styles.playButtonText}>Reproducir</Text>
-      </TouchableOpacity>
-      {/* Agrega otros controles de reproducción de música aquí */}
-    </View>
+    <SafeAreaView style={styles.container}>
+      {/* Player UI */}
+      <View style={styles.playerContainer}>
+        {/* Display song title, artist name, album cover, and playback controls */}
+        <Image source={coverImage} style={styles.albumCover} />
+        <Text style={styles.songTitle}>{songTitle}</Text>
+        <Text style={styles.artistName}>{artistName}</Text>
+        {/* Add playback controls here (play, pause, skip, etc.) */}
+      </View>
+      {/* Progress bar */}
+      <Slider
+        style={styles.progressBar}
+        minimumValue={0}
+        maximumValue={1}
+        value={0} // You need to calculate and update the progress value
+        minimumTrackTintColor="#FFD369"
+        maximumTrackTintColor="#fff"
+      />
+      {/* Playback controls */}
+      {/* Add playback controls here (play, pause, skip, etc.) */}
+    </SafeAreaView>
   );
 };
 
-// Resto de tu código
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#222831',
+  },
+  playerContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  albumCover: {
+    width: 200,
+    height: 200,
+    borderRadius: 10,
+  },
+  songTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#FFF',
+    marginTop: 20,
+  },
+  artistName: {
+    fontSize: 18,
+    color: '#888888',
+    marginTop: 10,
+  },
+  progressBar: {
+    width: width - 40,
+    height: 40,
+    alignSelf: 'center',
+    marginTop: 20,
+  },
+  // Add styles for playback controls (play, pause, skip, etc.)
+});
 
 export default PlayerScreen;
