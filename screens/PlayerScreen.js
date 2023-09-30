@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -20,17 +20,14 @@ const PlayerScreen = ({ route }) => {
   const navigation = useNavigation();
 
   const start = async () => {
-
     // Define la lista de pistas de música que quieres reproducir
     const tracks = [
-        {
-            id: 'trackId1',
-            url: require(`../src/audio/Sparks.mp3`),
-            title: songTitle,
-            artist: artistName,
-            //artwork: require(`./${audioPath}track1.png`)
-        },
-     
+      {
+        id: 'trackId1',
+        url: require(`../src/audio/Sparks.mp3`),
+        title: songTitle,
+        artist: artistName,
+      },
     ];
 
     // Agrega las pistas a la cola
@@ -38,10 +35,10 @@ const PlayerScreen = ({ route }) => {
 
     // Inicia la reproducción de la primera pista
     await TrackPlayer.play();
-};
+  };
 
-// Llama a la función start para comenzar la reproducción
-start();
+
+  start();
 
 const handlePause = async () => {
   await TrackPlayer.pause();
@@ -54,11 +51,12 @@ const handleStop = async () => {
 const handleGoBack = () => {
   navigation.goBack();
 };
+
   return (
     <SafeAreaView style={styles.container}>
       {/* Player UI */}
       <TouchableOpacity style={styles.goBackButton} onPress={handleGoBack}>
-            <Icon name="chevron-left" size={24} color="white"/>
+        <Icon name="chevron-left" size={24} color="white" />
       </TouchableOpacity>
       <View style={styles.playerContainer}>
         {/* Display song title, artist name, album cover, and playback controls */}
@@ -67,28 +65,33 @@ const handleGoBack = () => {
         <Text style={styles.artistName}>{artistName}</Text>
         {/* Add playback controls here (play, pause, skip, etc.) */}
         <Slider
-        style={styles.progressBar}
-        minimumValue={0}
-        maximumValue={1}
-        value={0} // You need to calculate and update the progress value
-        minimumTrackTintColor="#FFD369"
-        maximumTrackTintColor="#fff"
-      />
-          {/* Botón de pausa */}
+          style={styles.progressBar}
+          minimumValue={0}
+          maximumValue={1} // Usar duration en lugar de 1
+          value={0} // Usar position para reflejar el progreso
+          minimumTrackTintColor="#FFD369"
+          maximumTrackTintColor="#fff"
+        />
+
+        <View style={styles.controlButtons}>
+          <TouchableOpacity /*onPress={handlePrevious}*/>
+            <Icon name="step-backward" size={24} color="#888888" />
+          </TouchableOpacity>
           <TouchableOpacity onPress={handlePause}>
-          <Text>Pausa</Text>
-        </TouchableOpacity>
-
-      {/* Botón de detención (stop) */}
-      <TouchableOpacity onPress={handleStop}>
-        <Text>Detener</Text>
-      </TouchableOpacity>
+            <Icon name="pause" size={24} color="#888888" />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={handleStop}>
+            <Icon name="stop" size={24} color="#888888" />
+          </TouchableOpacity>
+          <TouchableOpacity /*onPress={handleNext}*/>
+            <Icon name="step-forward" size={24} color="#888888" />
+          </TouchableOpacity>
+        </View>
       </View>
-
-
     </SafeAreaView>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
@@ -122,7 +125,27 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 20,
   },
-  // Add styles for playback controls (play, pause, skip, etc.)
+  timeControls: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: width - 40,
+    marginTop: 10,
+  },
+  durationText: {
+    color: '#888888',
+  },
+  controlButtons: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: width - 40,
+    marginTop: 20,
+  },
+  goBackButton: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    zIndex: 1,
+  },
 });
 
 export default PlayerScreen;
