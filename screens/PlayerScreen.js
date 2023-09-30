@@ -10,25 +10,24 @@ import {
 } from 'react-native';
 import TrackPlayer from 'react-native-track-player';
 import Slider from '@react-native-community/slider';
+import { useNavigation } from "@react-navigation/native";
+import Icon from "react-native-vector-icons/FontAwesome"; // Asegúrate de importar Icon de FontAwesome
+
 const { width, height } = Dimensions.get('window');
 
 const PlayerScreen = ({ route }) => {
   const { songTitle, artistName, coverImage } = route.params;
+  const navigation = useNavigation();
 
   const start = async () => {
-    // Set up the player
-    await TrackPlayer.setupPlayer();
-
-    // Define la ruta a la carpeta "audio" dentro de "src"
-    const audioPath = './src/audio/';
 
     // Define la lista de pistas de música que quieres reproducir
     const tracks = [
         {
             id: 'trackId1',
-            url: require(`../${audioPath}Sparks.mp3`),
-            title: 'Sparks',
-            artist: 'Coldplay',
+            url: require(`../src/audio/Sparks.mp3`),
+            title: songTitle,
+            artist: artistName,
             //artwork: require(`./${audioPath}track1.png`)
         },
      
@@ -44,18 +43,30 @@ const PlayerScreen = ({ route }) => {
 // Llama a la función start para comenzar la reproducción
 start();
 
+const handlePause = async () => {
+  await TrackPlayer.pause();
+};
+
+const handleStop = async () => {
+  await TrackPlayer.reset();
+};
+
+const handleGoBack = () => {
+  navigation.goBack();
+};
   return (
     <SafeAreaView style={styles.container}>
       {/* Player UI */}
+      <TouchableOpacity style={styles.goBackButton} onPress={handleGoBack}>
+            <Icon name="chevron-left" size={24} color="white"/>
+      </TouchableOpacity>
       <View style={styles.playerContainer}>
         {/* Display song title, artist name, album cover, and playback controls */}
         <Image source={coverImage} style={styles.albumCover} />
         <Text style={styles.songTitle}>{songTitle}</Text>
         <Text style={styles.artistName}>{artistName}</Text>
         {/* Add playback controls here (play, pause, skip, etc.) */}
-      </View>
-      {/* Progress bar */}
-      <Slider
+        <Slider
         style={styles.progressBar}
         minimumValue={0}
         maximumValue={1}
@@ -63,6 +74,17 @@ start();
         minimumTrackTintColor="#FFD369"
         maximumTrackTintColor="#fff"
       />
+          {/* Botón de pausa */}
+          <TouchableOpacity onPress={handlePause}>
+          <Text>Pausa</Text>
+        </TouchableOpacity>
+
+      {/* Botón de detención (stop) */}
+      <TouchableOpacity onPress={handleStop}>
+        <Text>Detener</Text>
+      </TouchableOpacity>
+      </View>
+
 
     </SafeAreaView>
   );
