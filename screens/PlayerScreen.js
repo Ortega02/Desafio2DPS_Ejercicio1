@@ -15,29 +15,34 @@ const { width, height } = Dimensions.get('window');
 const PlayerScreen = ({ route }) => {
   const { songTitle, artistName, coverImage } = route.params;
 
-  useEffect(() => {
-    const setupAndPlaySong = async () => {
-      try {
-        await TrackPlayer.setupPlayer();
-        await TrackPlayer.add({
-          id: 'mySong', // Unique ID for the song
-          url: `../src/audio/${songTitle}.mp3`, // Path to the song file
-          title: songTitle,
-          artist: artistName,
-          artwork: coverImage,
-        });
-        await TrackPlayer.play();
-      } catch (error) {
-        console.error('Error playing the song:', error);
-      }
-    };
+  const start = async () => {
+    // Set up the player
+    await TrackPlayer.setupPlayer();
 
-    setupAndPlaySong();
+    // Define la ruta a la carpeta "audio" dentro de "src"
+    const audioPath = './src/audio/';
 
-    return () => {
-      TrackPlayer.destroy();
-    };
-  }, [songTitle, artistName, coverImage]);
+    // Define la lista de pistas de música que quieres reproducir
+    const tracks = [
+        {
+            id: 'trackId1',
+            url: require(`../${audioPath}Sparks.mp3`),
+            title: 'Sparks',
+            artist: 'Coldplay',
+            //artwork: require(`./${audioPath}track1.png`)
+        },
+     
+    ];
+
+    // Agrega las pistas a la cola
+    await TrackPlayer.add(tracks);
+
+    // Inicia la reproducción de la primera pista
+    await TrackPlayer.play();
+};
+
+// Llama a la función start para comenzar la reproducción
+start();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -58,8 +63,7 @@ const PlayerScreen = ({ route }) => {
         minimumTrackTintColor="#FFD369"
         maximumTrackTintColor="#fff"
       />
-      {/* Playback controls */}
-      {/* Add playback controls here (play, pause, skip, etc.) */}
+
     </SafeAreaView>
   );
 };
