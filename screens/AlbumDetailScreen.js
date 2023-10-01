@@ -12,6 +12,7 @@ const AlbumDetailScreen = ({ route }) => {
     navigation.navigate("PlayerScreen", {
       albumTitle: album.titulo,
       songTitle: cancion.cancion,
+      ruta: cancion.ruta,
       artistName: autor,
       coverImage: album.cover,
     });

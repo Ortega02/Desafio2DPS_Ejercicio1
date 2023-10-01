@@ -16,22 +16,22 @@ import Icon from "react-native-vector-icons/FontAwesome"; // Asegúrate de impor
 const { width, height } = Dimensions.get('window');
 
 const PlayerScreen = ({ route }) => {
-  const { songTitle, artistName, coverImage } = route.params;
+  const { songTitle, artistName, coverImage, ruta } = route.params;
   const navigation = useNavigation();
 
   const start = async () => {
-    // Define la lista de pistas de música que quieres reproducir
-    const tracks = [
-      {
-        id: 'trackId1',
-        url: require(`../src/audio/Sparks.mp3`),
-        title: songTitle,
-        artist: artistName,
-      },
-    ];
+
+    //const url = require("../src/audio/sparks.mp3");
 
     // Agrega las pistas a la cola
-    await TrackPlayer.add(tracks);
+    await TrackPlayer.add(
+      {
+        id: "trackId1",
+        url: ruta,
+        title: songTitle,
+        artist: artistName,
+      }
+    );
 
     // Inicia la reproducción de la primera pista
     await TrackPlayer.play();

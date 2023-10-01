@@ -15,6 +15,7 @@ const musica = {
                   {
                     cancion: "Sparks",
                     duracion: "3:47", 
+                    ruta: require("./src/audio/sparks.mp3"),
                   },
                   {
                     cancion: "Yellow",
@@ -81,6 +82,7 @@ const musica = {
                   {
                     cancion: "Do I Wanna Know",
                     duracion: "4:32", 
+                    ruta: require("./src/audio/doiwannaknow.mp3"),
                   },
                   {
                     cancion: "I Wanna Be Yours",
