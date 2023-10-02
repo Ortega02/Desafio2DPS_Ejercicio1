@@ -15,6 +15,7 @@ const AlbumDetailScreen = ({ route }) => {
       ruta: cancion.ruta,
       artistName: autor,
       coverImage: album.cover,
+      duration: cancion.duracion,
     });
   };  
   
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color:"white",
-    marginRight: 140,
+    marginRight: 100,
   },
   artistContainer: {
     alignItems: "center", // Alinea el contenido al centro (verticalmente)

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -7,50 +7,46 @@ import {
   Dimensions,
   TouchableOpacity,
   Image,
-} from 'react-native';
-import TrackPlayer from 'react-native-track-player';
-import Slider from '@react-native-community/slider';
+} from "react-native";
+import TrackPlayer from "react-native-track-player";
+import Slider from "@react-native-community/slider";
 import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/FontAwesome"; // Asegúrate de importar Icon de FontAwesome
 
-const { width, height } = Dimensions.get('window');
+const { width, height } = Dimensions.get("window");
 
 const PlayerScreen = ({ route }) => {
-  const { songTitle, artistName, coverImage, ruta } = route.params;
+  const { songTitle, artistName, coverImage, ruta, duration } = route.params;
   const navigation = useNavigation();
 
   const start = async () => {
-
     //const url = require("../src/audio/sparks.mp3");
 
     // Agrega las pistas a la cola
-    await TrackPlayer.add(
-      {
-        id: "trackId1",
-        url: ruta,
-        title: songTitle,
-        artist: artistName,
-      }
-    );
+    await TrackPlayer.add({
+      id: "trackId1",
+      url: ruta,
+      title: songTitle,
+      artist: artistName,
+    });
 
     // Inicia la reproducción de la primera pista
     await TrackPlayer.play();
   };
 
-
   start();
 
-const handlePause = async () => {
-  await TrackPlayer.pause();
-};
+  const handlePause = async () => {
+    await TrackPlayer.pause();
+  };
 
-const handleStop = async () => {
-  await TrackPlayer.reset();
-};
+  const handleStop = async () => {
+    await TrackPlayer.reset();
+  };
 
-const handleGoBack = () => {
-  navigation.goBack();
-};
+  const handleGoBack = () => {
+    navigation.goBack();
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -73,6 +69,11 @@ const handleGoBack = () => {
           maximumTrackTintColor="#fff"
         />
 
+        <View style={styles.timeControls}>
+          <Text style={styles.durationText}>0:00</Text>
+          <Text style={styles.durationText}>{duration}</Text>
+        </View>
+
         <View style={styles.controlButtons}>
           <TouchableOpacity /*onPress={handlePrevious}*/>
             <Icon name="step-backward" size={24} color="#888888" />
@@ -92,16 +93,15 @@ const handleGoBack = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#222831',
+    backgroundColor: "#222831",
   },
   playerContainer: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   albumCover: {
     width: 200,
@@ -110,38 +110,40 @@ const styles = StyleSheet.create({
   },
   songTitle: {
     fontSize: 24,
-    fontWeight: 'bold',
-    color: '#FFF',
+    fontWeight: "bold",
+    color: "#FFF",
     marginTop: 20,
   },
   artistName: {
     fontSize: 18,
-    color: '#888888',
+    color: "#888888",
     marginTop: 10,
   },
   progressBar: {
     width: width - 40,
     height: 40,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginTop: 20,
   },
   timeControls: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     width: width - 40,
     marginTop: 10,
   },
   durationText: {
-    color: '#888888',
+    color: "#888888",
+    textAlign: "right",
+    alignContent: "flex-end",
   },
   controlButtons: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
     width: width - 40,
     marginTop: 20,
   },
   goBackButton: {
-    position: 'absolute',
+    position: "absolute",
     top: 20,
     left: 20,
     zIndex: 1,
