@@ -25,7 +25,9 @@ const PlayerScreen = ({ route }) => {
     // Agrega las pistas a la cola
     await TrackPlayer.add({
       id: "trackId1",
-      url: ruta,
+      //para cuando se quiere usar el reproductor con más de una canción
+      /*url: ruta,*/
+      url: require("../src/audio/Sparks.mp3"),
       title: songTitle,
       artist: artistName,
     });

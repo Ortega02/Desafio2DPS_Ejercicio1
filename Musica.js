@@ -14,8 +14,9 @@ const musica = {
                 canciones: [
                   {
                     cancion: "Sparks",
-                    duracion: "3:47", 
-                    ruta: require("./src/audio/sparks.mp3"),
+                    duracion: "3:47",
+                    //definir ruta para cuando se quiere usar el reproductor con más de una cancion que reproduzca 
+                    ruta: require("./src/audio/Sparks.mp3"),
                   },
                   {
                     cancion: "Yellow",
@@ -585,12 +586,250 @@ const musica = {
               },
             ],
           },
-
+          {
+            autor: "The Strokes",
+            album: [
+              {
+                titulo: "Is This It",
+                cover: require("./src/img/strokes.png"),
+                canciones: [
+                  {
+                    cancion: "Is This It",
+                    duracion: "2:31",
+                  },
+                  {
+                    cancion: "Last Nite",
+                    duracion: "3:13",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            autor: "The Stone Roses",
+            album: [
+              {
+                titulo: "Second Coming",
+                cover: require("./src/img/stones.jpg"),
+                canciones: [
+                  {
+                    cancion: "Breaking Into Heaven",
+                    duracion: "11:19",
+                  },
+                  {
+                    cancion: "Driving South",
+                    duracion: "5:09",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            autor: "The Smiths",
+            album: [
+              {
+                titulo: "The Smiths",
+                cover: require("./src/img/smiths.jpg"),
+                canciones: [
+                  {
+                    cancion: "Reel Around The Fountain",
+                    duracion: "5:59",
+                  },
+                  {
+                    cancion: "You've Got Everything Now",
+                    duracion: "3:59",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            autor: "Pavement",
+            album: [
+              {
+                titulo: "Terror Twilight",
+                cover: require("./src/img/terror.jpg"),
+                canciones: [
+                  {
+                    cancion: "Spit On A Stranger",
+                    duracion: "3:04",
+                  },
+                  {
+                    cancion: "Folk Jam",
+                    duracion: "3:34",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            autor: "Modest Mouse",
+            album: [
+              {
+                titulo: "The Moon & Antartica",
+                cover: require("./src/img/moon.jpg"),
+                canciones: [
+                  {
+                    cancion: "3rd Planet",
+                    duracion: "3:58",
+                  },
+                  {
+                    cancion: "Gravity Rides Everything",
+                    duracion: "4:19",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            autor: "Radiohead",
+            album: [
+              {
+                titulo: "In Rainbows",
+                cover: require("./src/img/rainbows.jpg"),
+                canciones: [
+                  {
+                    cancion: "15 Step",
+                    duracion: "3:57",
+                  },
+                  {
+                    cancion: "Bodysnatchers",
+                    duracion: "4:02",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            autor: "Pixies",
+            album: [
+              {
+                titulo: "Beneath The Eyrie",
+                cover: require("./src/img/pixies.jpg"),
+                canciones: [
+                  {
+                    cancion: "On Graveyard Hill",
+                    duracion: "3:25",
+                  },
+                  {
+                    cancion: "Catfish Kate",
+                    duracion: "3:08",
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
       {
         nombre: "Hip Hop/Rap",
         artistas: [
+          {
+            autor: "Post Malone",
+            album: [
+              {
+                titulo: "Beerbongs & Bentleys",
+                cover: require("./src/img/beerbongs.png"),
+                canciones: [
+                  {
+                    cancion: "Better Now",
+                    duracion: "3:51", 
+                  },
+                  {
+                    cancion: "Psycho",
+                    duracion: "3:41",
+                  },
+
+                ],
+              },
+             
+            ],
+          },
+          {
+            autor: "Travis Scott",
+            album: [
+              {
+                titulo: "Astroworld",
+                cover: require("./src/img/astroworld.jpg"),
+                canciones: [
+                  {
+                    cancion: "Sicko Mode",
+                    duracion: "5:12", 
+                  },
+                  {
+                    cancion: "Butterfly Effect",
+                    duracion: "3:10",
+                  },
+
+                ],
+              },
+             
+            ],
+          },
+          {
+            autor: "Kendrick Lamar",
+            album: [
+              {
+                titulo: "Mr. Morale & the Big Steppers",
+                cover: require("./src/img/morales.jpg"),
+                canciones: [
+                  {
+                    cancion: "United In Grief",
+                    duracion: "4:15", 
+                  },
+                  {
+                    cancion: "N95",
+                    duracion: "3:15",
+                  },
+
+                ],
+              },
+             
+            ],
+          },
+          {
+            autor: "Drake",
+            album: [
+              {
+                titulo: "Views",
+                cover: require("./src/img/views.jpg"),
+                canciones: [
+                  {
+                    cancion: "One Dance",
+                    duracion: "2:53", 
+                  },
+                  {
+                    cancion: "Hotline Bling",
+                    duracion: "4:27",
+                  },
+
+                ],
+              },
+             
+            ],
+          },
+          {
+            autor: "Kanye West",
+            album: [
+              {
+                titulo: "Graduation",
+                cover: require("./src/img/graduation.jpg"),
+                canciones: [
+                  {
+                    cancion: "Stronger",
+                    duracion: "5:11", 
+                  },
+                  {
+                    cancion: "Flashing Lights",
+                    duracion: "3:57",
+                  },
+
+                ],
+              },
+             
+            ],
+          },
+          
           {
             autor: "Eminem",
             album: [
@@ -648,6 +887,48 @@ const musica = {
                   },
                 ],
               },
+            ],
+          },
+          {
+            autor: "Ice Cube",
+            album: [
+              {
+                titulo: "Raw Footage",
+                cover: require("./src/img/raw.jpg"),
+                canciones: [
+                  {
+                    cancion: "Gangsta Rap Made Me Do It",
+                    duracion: "4:41", 
+                  },
+                  {
+                    cancion: "Hood Mentality",
+                    duracion: "5:11",
+                  },
+
+                ],
+              },
+             
+            ],
+          },
+          {
+            autor: "Jay Z",
+            album: [
+              {
+                titulo: "Watch The Throne",
+                cover: require("./src/img/throne.jpg"),
+                canciones: [
+                  {
+                    cancion: "No Church In The Wild",
+                    duracion: "4:32", 
+                  },
+                  {
+                    cancion: "lift Off",
+                    duracion: "4:26",
+                  },
+
+                ],
+              },
+             
             ],
           },
 
