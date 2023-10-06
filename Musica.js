@@ -536,13 +536,43 @@ const musica = {
                   {
                     cancion: "Do I Wanna Know",
                     duracion: "4:32", 
-                    ruta: require("./src/audio/doiwannaknow.mp3"),
                   },
                   {
                     cancion: "I Wanna Be Yours",
                     duracion: "3:03",
                   },
-
+                  {
+                    cancion: "R U Mine?",
+                    duracion: "3:21",
+                  },
+                  {
+                    cancion: "Arabella",
+                    duracion: "3:27",
+                  },
+                  {
+                    cancion: "Snap Out Of It",
+                    duracion: "3:13",
+                  },
+                  {
+                    cancion: "Knee Socks",
+                    duracion: "3:03",
+                  },
+                  {
+                    cancion: "I Want It All",
+                    duracion: "3:05",
+                  },
+                  {
+                    cancion: "One For The Road",
+                    duracion: "3:26",
+                  },
+                  {
+                    cancion: "Mad Sounds",
+                    duracion: "3:35",
+                  },
+                  {
+                    cancion: "Fireside",
+                    duracion: "3:01",
+                  },
                 ],
               },
              
@@ -563,6 +593,38 @@ const musica = {
                     cancion: "Dont Look Back In Anger",
                     duracion: "4:49",
                   },
+                  {
+                    cancion: "She's Electric",
+                    duracion: "3:40",
+                  },
+                  {
+                    cancion: "Hello",
+                    duracion: "3:23",
+                  },
+                  {
+                    cancion: "Roll With It",
+                    duracion: "4:00",
+                  },
+                  {
+                    cancion: "Hey Now",
+                    duracion: "5:41",
+                  },
+                  {
+                    cancion: "Some Might Stay",
+                    duracion: "5:27",
+                  },
+                  {
+                    cancion: "Cast No Shadow",
+                    duracion: "4:54",
+                  },
+                  {
+                    cancion: "Morning Glory",
+                    duracion: "5:03",
+                  },
+                  {
+                    cancion: "Champagne Supernova",
+                    duracion: "7:31",
+                  },
                 ],
               },
             ],
@@ -581,6 +643,38 @@ const musica = {
                   {
                     cancion: "Come As You Are",
                     duracion: "3:38",
+                  },
+                  {
+                    cancion: "In Bloom",
+                    duracion: "4:15",
+                  },
+                  {
+                    cancion: "Breed",
+                    duracion: "3:04",
+                  },
+                  {
+                    cancion: "Lithium",
+                    duracion: "4:17",
+                  },
+                  {
+                    cancion: "Polly",
+                    duracion: "2:53",
+                  },
+                  {
+                    cancion: "Territorial Pissings",
+                    duracion: "2:22",
+                  },
+                  {
+                    cancion: "Drain You",
+                    duracion: "3:43",
+                  },
+                  {
+                    cancion: "Lounge Act",
+                    duracion: "2:36",
+                  },
+                  {
+                    cancion: "Stay Away",
+                    duracion: "3:31",
                   },
                 ],
               },
@@ -601,6 +695,38 @@ const musica = {
                     cancion: "Last Nite",
                     duracion: "3:13",
                   },
+                  {
+                    cancion: "The Modern Age",
+                    duracion: "3:28",
+                  },
+                  {
+                    cancion: "Soma",
+                    duracion: "2:33",
+                  },
+                  {
+                    cancion: "Barely Legal",
+                    duracion: "3:54",
+                  },
+                  {
+                    cancion: "Someday",
+                    duracion: "3:03",
+                  },
+                  {
+                    cancion: "Alone Together",
+                    duracion: "3:08",
+                  },
+                  {
+                    cancion: "Hard To Explain",
+                    duracion: "3:44",
+                  },
+                  {
+                    cancion: "New York City Cops",
+                    duracion: "3:30",
+                  },
+                  {
+                    cancion: "Trying Your Luck",
+                    duracion: "3:22",
+                  },
                 ],
               },
             ],
@@ -619,6 +745,38 @@ const musica = {
                   {
                     cancion: "Driving South",
                     duracion: "5:09",
+                  },
+                  {
+                    cancion: "Ten Storey Love Song",
+                    duracion: "4:29",
+                  },
+                  {
+                    cancion: "Daybreak",
+                    duracion: "6:33",
+                  },
+                  {
+                    cancion: "Your Star Will Shine",
+                    duracion: "2:55",
+                  },
+                  {
+                    cancion: "Straight To The Man",
+                    duracion: "3:13",
+                  },
+                  {
+                    cancion: "Begging You",
+                    duracion: "4:53",
+                  },
+                  {
+                    cancion: "Tightrope",
+                    duracion: "4:24",
+                  },
+                  {
+                    cancion: "Good Times",
+                    duracion: "5:40",
+                  },
+                  {
+                    cancion: "Tears",
+                    duracion: "6:50",
                   },
                 ],
               },
@@ -639,6 +797,38 @@ const musica = {
                     cancion: "You've Got Everything Now",
                     duracion: "3:59",
                   },
+                  {
+                    cancion: "Miserable Lie",
+                    duracion: "4:27",
+                  },
+                  {
+                    cancion: "Pretty Girls Make Graves",
+                    duracion: "3:43",
+                  },
+                  {
+                    cancion: "This Charming Man",
+                    duracion: "2:42",
+                  },
+                  {
+                    cancion: "Still Ill",
+                    duracion: "3:21",
+                  },
+                  {
+                    cancion: "Hand In The Glove",
+                    duracion: "3:22",
+                  },
+                  {
+                    cancion: "What Difference Does It Make",
+                    duracion: "3:49",
+                  },
+                  {
+                    cancion: "I Dont Owe You Anything",
+                    duracion: "4:04",
+                  },
+                  {
+                    cancion: "Suffer Little Children",
+                    duracion: "5:30",
+                  },
                 ],
               },
             ],
@@ -657,6 +847,38 @@ const musica = {
                   {
                     cancion: "Folk Jam",
                     duracion: "3:34",
+                  },
+                  {
+                    cancion: "You Are A Light",
+                    duracion: "3:54",
+                  },
+                  {
+                    cancion: "Cream Of Gold",
+                    duracion: "3:47",
+                  },
+                  {
+                    cancion: "Major Leagues",
+                    duracion: "3:24",
+                  },
+                  {
+                    cancion: "Platform Blues",
+                    duracion: "4:42",
+                  },
+                  {
+                    cancion: "Ann Dont Cry",
+                    duracion: "4:09",
+                  },
+                  {
+                    cancion: "Billie",
+                    duracion: "3:44",
+                  },
+                  {
+                    cancion: "Speak,See,Remember",
+                    duracion: "4:19",
+                  },
+                  {
+                    cancion: "The Hexx",
+                    duracion: "3:03",
                   },
                 ],
               },
@@ -677,6 +899,38 @@ const musica = {
                     cancion: "Gravity Rides Everything",
                     duracion: "4:19",
                   },
+                  {
+                    cancion: "Dark Center Of The Universe",
+                    duracion: "5:02",
+                  },
+                  {
+                    cancion: "Perfect Disguise",
+                    duracion: "2:32",
+                  },
+                  {
+                    cancion: "Tiny Cities Made Of Ashes",
+                    duracion: "3:14",
+                  },
+                  {
+                    cancion: "A Differnt City",
+                    duracion: "3:03",
+                  },
+                  {
+                    cancion: "The Cold Part",
+                    duracion: "5:00",
+                  },
+                  {
+                    cancion: "Alone Down There",
+                    duracion: "2:21",
+                  },
+                  {
+                    cancion: "The Stars Are Projectors",
+                    duracion: "8:45",
+                  },
+                  {
+                    cancion: "Paper Thin Walls",
+                    duracion: "3:01",
+                  },
                 ],
               },
             ],
@@ -695,6 +949,38 @@ const musica = {
                   {
                     cancion: "Bodysnatchers",
                     duracion: "4:02",
+                  },
+                  {
+                    cancion: "Nude",
+                    duracion: "4:15",
+                  },
+                  {
+                    cancion: "Weird Fishes/Arpeggi",
+                    duracion: "5:18",
+                  },
+                  {
+                    cancion: "All I Need",
+                    duracion: "3:48",
+                  },
+                  {
+                    cancion: "Faust Arp",
+                    duracion: "2:09",
+                  },
+                  {
+                    cancion: "Reckoner",
+                    duracion: "4:50",
+                  },
+                  {
+                    cancion: "House Of Cards",
+                    duracion: "5:28",
+                  },
+                  {
+                    cancion: "Jigwasw Falling Into Place",
+                    duracion: "4:08",
+                  },
+                  {
+                    cancion: "Videotape",
+                    duracion: "4:39",
                   },
                 ],
               },
@@ -715,6 +1001,38 @@ const musica = {
                     cancion: "Catfish Kate",
                     duracion: "3:08",
                   },
+                  {
+                    cancion: "This Is My Fate",
+                    duracion: "3:20",
+                  },
+                  {
+                    cancion: "Ready For Love",
+                    duracion: "2:33",
+                  },
+                  {
+                    cancion: "Silver Bullet",
+                    duracion: "3:44",
+                  },
+                  {
+                    cancion: "Long Rider",
+                    duracion: "3:32",
+                  },
+                  {
+                    cancion: "Los Surfers Muertos",
+                    duracion: "2:54",
+                  },
+                  {
+                    cancion: "St.Nazaire",
+                    duracion: "2:27",
+                  },
+                  {
+                    cancion: "Bird Of Prey",
+                    duracion: "2:37",
+                  },
+                  {
+                    cancion: "Daniel Boone",
+                    duracion: "4:52",
+                  },
                 ],
               },
             ],
@@ -732,6 +1050,10 @@ const musica = {
                 cover: require("./src/img/beerbongs.png"),
                 canciones: [
                   {
+                    cancion: "Rockstar",
+                    duracion: "3:38",
+                  },
+                  {
                     cancion: "Better Now",
                     duracion: "3:51", 
                   },
@@ -739,7 +1061,34 @@ const musica = {
                     cancion: "Psycho",
                     duracion: "3:41",
                   },
-
+                  {
+                    cancion: "Paranoid",
+                    duracion: "3:41",
+                  },
+                  {
+                    cancion: "Spoil My Night",
+                    duracion: "3:14",
+                  },
+                  {
+                    cancion: "Rich & Sad",
+                    duracion: "3:26",
+                  },
+                  {
+                    cancion: "Zach And Codeine",
+                    duracion: "3:24",
+                  },
+                  {
+                    cancion: "Taking Shots",
+                    duracion: "3:36",
+                  },
+                  {
+                    cancion: "Over Now",
+                    duracion: "4:06",
+                  },
+                  {
+                    cancion: "Ball For Me",
+                    duracion: "3:26",
+                  },
                 ],
               },
              
@@ -760,7 +1109,38 @@ const musica = {
                     cancion: "Butterfly Effect",
                     duracion: "3:10",
                   },
-
+                  {
+                    cancion: "Stargazing",
+                    duracion: "4:30",
+                  },
+                  {
+                    cancion: "Carousel",
+                    duracion: "3:00",
+                  },
+                  {
+                    cancion: "R.I.P Screw",
+                    duracion: "3:05",
+                  },
+                  {
+                    cancion: "Stop Trying To Be God",
+                    duracion: "5:38",
+                  },
+                  {
+                    cancion: "No Bystanders",
+                    duracion: "3:38",
+                  },
+                  {
+                    cancion: "Skeletons",
+                    duracion: "2:25",
+                  },
+                  {
+                    cancion: "Wake Up",
+                    duracion: "3:51",
+                  },
+                  {
+                    cancion: "Astrothunder",
+                    duracion: "2:22",
+                  },
                 ],
               },
              
@@ -781,7 +1161,38 @@ const musica = {
                     cancion: "N95",
                     duracion: "3:15",
                   },
-
+                  {
+                    cancion: "Worldwide Steppers",
+                    duracion: "3:23",
+                  },
+                  {
+                    cancion: "Die Hard",
+                    duracion: "3:59",
+                  },
+                  {
+                    cancion: "Father Time",
+                    duracion: "3:42",
+                  },
+                  {
+                    cancion: "Rich",
+                    duracion: "1:43",
+                  },
+                  {
+                    cancion: "Rich Spirit",
+                    duracion: "3:22",
+                  },
+                  {
+                    cancion: "We Cry Together",
+                    duracion: "5:41",
+                  },
+                  {
+                    cancion: "Purple Harts",
+                    duracion: "5:29",
+                  },
+                  {
+                    cancion: "Count Me Out",
+                    duracion: "4:43",
+                  },
                 ],
               },
              
@@ -802,7 +1213,38 @@ const musica = {
                     cancion: "Hotline Bling",
                     duracion: "4:27",
                   },
-
+                  {
+                    cancion: "Keep The Family Close",
+                    duracion: "5:28",
+                  },
+                  {
+                    cancion: "9",
+                    duracion: "4:15",
+                  },
+                  {
+                    cancion: "U With Me?",
+                    duracion: "4:57",
+                  },
+                  {
+                    cancion: "Feel No Ways",
+                    duracion: "4:00",
+                  },
+                  {
+                    cancion: "Hype",
+                    duracion: "3:29",
+                  },
+                  {
+                    cancion: "Weston Road Flows",
+                    duracion: "4:13",
+                  },
+                  {
+                    cancion: "Redemption",
+                    duracion: "5:33",
+                  },
+                  {
+                    cancion: "With You",
+                    duracion: "3:15",
+                  },
                 ],
               },
              
@@ -823,7 +1265,38 @@ const musica = {
                     cancion: "Flashing Lights",
                     duracion: "3:57",
                   },
-
+                  {
+                    cancion: "Good Morning",
+                    duracion: "3:15",
+                  },
+                  {
+                    cancion: "Champion",
+                    duracion: "2:47",
+                  },
+                  {
+                    cancion: "I Wonder",
+                    duracion: "4:03",
+                  },
+                  {
+                    cancion: "Good Life",
+                    duracion: "3:27",
+                  },
+                  {
+                    cancion: "Cant Tell Me Nothing",
+                    duracion: "4:31",
+                  },
+                  {
+                    cancion: "Barry Bonds",
+                    duracion: "3:24",
+                  },
+                  {
+                    cancion: "Drunk And Hot Girls",
+                    duracion: "5:13",
+                  },
+                  {
+                    cancion: "Everything Im Am",
+                    duracion: "3:47",
+                  },
                 ],
               },
              
@@ -845,7 +1318,38 @@ const musica = {
                     cancion: "Till I Colapse",
                     duracion: "4:57",
                   },
-
+                  {
+                    cancion: "White America",
+                    duracion: "5:24",
+                  },
+                  {
+                    cancion: "Business",
+                    duracion: "4:11",
+                  },
+                  {
+                    cancion: "Cleanin Out My Closet",
+                    duracion: "4:57",
+                  },
+                  {
+                    cancion: "Square Dance",
+                    duracion: "5:23",
+                  },
+                  {
+                    cancion: "Soldier",
+                    duracion: "3:46",
+                  },
+                  {
+                    cancion: "Say Goodbye Hollywood",
+                    duracion: "4:32",
+                  },
+                  {
+                    cancion: "Drips",
+                    duracion: "4:45",
+                  },
+                  {
+                    cancion: "Sing For The Moment",
+                    duracion: "5:39",
+                  },
                 ],
               },
              
@@ -866,6 +1370,38 @@ const musica = {
                     cancion: "21 Questions",
                     duracion: "3:44",
                   },
+                  {
+                    cancion: "What Up Gangsta",
+                    duracion: "2:59",
+                  },
+                  {
+                    cancion: "Patiently Waiting",
+                    duracion: "4:48",
+                  },
+                  {
+                    cancion: "Many Men",
+                    duracion: "4:16",
+                  },
+                  {
+                    cancion: "High All Time",
+                    duracion: "4:29",
+                  },
+                  {
+                    cancion: "Heat",
+                    duracion: "4:14",
+                  },
+                  {
+                    cancion: "If I Cant",
+                    duracion: "3:16",
+                  },
+                  {
+                    cancion: "Blood Hound",
+                    duracion: "4:00",
+                  },
+                  {
+                    cancion: "Back Down",
+                    duracion: "4:03",
+                  },
                 ],
               },
             ],
@@ -884,6 +1420,38 @@ const musica = {
                   {
                     cancion: "The Next Episode",
                     duracion: "2:41",
+                  },
+                  {
+                    cancion: "The Watcher",
+                    duracion: "3:26",
+                  },
+                  {
+                    cancion: "Big Egos",
+                    duracion: "3:58",
+                  },
+                  {
+                    cancion: "Xxplosive",
+                    duracion: "3:35",
+                  },
+                  {
+                    cancion: "Whats The Difference",
+                    duracion: "4:04",
+                  },
+                  {
+                    cancion: "Light Speed",
+                    duracion: "2:40",
+                  },
+                  {
+                    cancion: "Forgot About Dre",
+                    duracion: "3:42",
+                  },
+                  {
+                    cancion: "Lets Get High",
+                    duracion: "2:27",
+                  },
+                  {
+                    cancion: "Housewife",
+                    duracion: "4:02",
                   },
                 ],
               },
@@ -904,7 +1472,38 @@ const musica = {
                     cancion: "Hood Mentality",
                     duracion: "5:11",
                   },
-
+                  {
+                    cancion: "I Got My Locks On",
+                    duracion: "3:43",
+                  },
+                  {
+                    cancion: "It Takes A Nation",
+                    duracion: "3:26",
+                  },
+                  {
+                    cancion: "Why Me?",
+                    duracion: "4:00",
+                  },
+                  {
+                    cancion: "Cold Places",
+                    duracion: "4:12",
+                  },
+                  {
+                    cancion: "Jack N The Box",
+                    duracion: "4:22",
+                  },
+                  {
+                    cancion: "Do Ya Thang",
+                    duracion: "4:04",
+                  },
+                  {
+                    cancion: "Thank God",
+                    duracion: "5:28",
+                  },
+                  {
+                    cancion: "Here He Come",
+                    duracion: "4:32",
+                  },
                 ],
               },
              
@@ -925,7 +1524,38 @@ const musica = {
                     cancion: "lift Off",
                     duracion: "4:26",
                   },
-
+                  {
+                    cancion: "Otis",
+                    duracion: "2:58",
+                  },
+                  {
+                    cancion: "Gotta Have It",
+                    duracion: "2:20",
+                  },
+                  {
+                    cancion: "New Day",
+                    duracion: "4:32",
+                  },
+                  {
+                    cancion: "Welcome To The Jungle",
+                    duracion: "2:54",
+                  },
+                  {
+                    cancion: "Who Gon Stop Me",
+                    duracion: "4:16",
+                  },
+                  {
+                    cancion: "Made In America",
+                    duracion: "4:52",
+                  },
+                  {
+                    cancion: "Why I Love You",
+                    duracion: "3:21",
+                  },
+                  {
+                    cancion: "Ni**as In Paris",
+                    duracion: "3:39",
+                  },
                 ],
               },
              
